@@ -1,0 +1,16 @@
+﻿@model PRSwithMVC.ViewModels.ShowPurchaseRequests
+@{
+    ViewBag.Title = "ShowPR";
+}
+
+<h2>Purchase Requests</h2>
+
+<table class="table">
+    <tr><th>Purchase Request</th><th>Status</th></tr>
+    @foreach(var request in Model.Purchaserequest) {
+        <tr>
+            <td>@request.Description</td>
+            <td>@request.Status</td>
+        </tr>
+    }
+</table>

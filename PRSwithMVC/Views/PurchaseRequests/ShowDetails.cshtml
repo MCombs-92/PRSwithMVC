@@ -1,0 +1,19 @@
+﻿@model PRSwithMVC.ViewModels.OrderDetails
+@{
+    ViewBag.Title = "ShowDetails";
+}
+
+<h2>Order Details</h2>
+
+<table class="table">
+    <tr><th>Part Number</th><th>Name</th><th>Price</th></tr>
+    @foreach (var line in Model.LineItem) {
+        <tr>
+            <td>@line.Product.PartNumber</td>
+            <td>@line.Product.Name</td>
+            <td>@line.Product.Price</td>
+        </tr>
+    }
+</table>
+
+
